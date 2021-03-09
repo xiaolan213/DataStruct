@@ -50,15 +50,15 @@ public class ComplexADT {
         return new ComplexADT(realPart,imagePart);
     }
 
+    public ComplexADT conjugate(ComplexADT com){
+        judge(com);
+        return new ComplexADT(com.getrealPart(),com.imagePart*(-1));
+    }
+
     public ComplexADT judge(ComplexADT com){
         if (com == null)
             return new ComplexADT();
         return com;
-    }
-
-    public ComplexADT conjugate(ComplexADT com){
-        judge(com);
-        return new ComplexADT(com.getrealPart(),com.imagePart*(-1));
     }
 
     public String output(){
