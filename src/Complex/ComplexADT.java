@@ -56,11 +56,17 @@ public class ComplexADT {
         return com;
     }
 
+    public ComplexADT conjugate(ComplexADT com){
+        judge(com);
+        return new ComplexADT(com.getrealPart(),com.imagePart*(-1));
+    }
+
     public String output(){
+        String symbols = imagePart > 0 ? "+" : "";
         if (imagePart > 0)
-            return realPart + "+" + imagePart + "i";
+            return realPart + symbols + imagePart + "i";
         else if (imagePart < 0)
-            return this.realPart + "+" + imagePart + "i";
+            return this.realPart + symbols + imagePart + "i";
         else
             return realPart + "";//虚数为0
     }
