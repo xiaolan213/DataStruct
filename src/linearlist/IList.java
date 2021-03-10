@@ -2,7 +2,7 @@ package linearlist;
 
 public interface IList {
 
-    //计算长度
+    //返回长度
     public int size();
 
     //清空列表
