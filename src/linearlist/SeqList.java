@@ -31,4 +31,9 @@ public class SeqList<T> {
         return this.n==0;
     }
 
+    //返回元素个数
+    public int size(){
+        return element.length;
+    }
+
 }
