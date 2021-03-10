@@ -26,7 +26,7 @@ public class SeqList<T> {
                 this.element[this.n++] = values[i];//对象引用赋值
     }
 
-    //pan
+    //判断顺序表是否为空
     public boolean isEmpty(){
         return this.n==0;
     }
