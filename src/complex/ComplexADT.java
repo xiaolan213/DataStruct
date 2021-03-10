@@ -1,6 +1,7 @@
 package complex;
 
 public class ComplexADT {
+
     private double realPart;
     private double imagePart;
 
