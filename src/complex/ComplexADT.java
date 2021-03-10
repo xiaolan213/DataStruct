@@ -1,4 +1,4 @@
-package Complex;
+package complex;
 
 public class ComplexADT {
     private double realPart;
