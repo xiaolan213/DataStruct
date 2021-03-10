@@ -2,8 +2,9 @@ import linearlist.SeqList;
 
 public class Test {
     public static void main(String... args) {
-        //复数ADT
+
         /**
+         * //复数ADT
          *ComplexADT complexNum1 = new ComplexADT(10, 11);
          *ComplexADT complexNum2 = new ComplexADT(2, 20);
          *
