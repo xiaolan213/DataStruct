@@ -86,7 +86,7 @@ public class SeqList<T> extends Object {
     //顺序表删除第i个元素
     public T remove(int i){
         //若0<=i<n 返回被删除的元素
-        if (i >=0 && i < this.n){
+        if (i >= 0 && i < this.n){
             T x = (T)this.element[i];//储存被删除的元素
             for (int j = i; j < this.n-1; j++)
                 this.element[j] = this.element[j+1];//元素向前移动一个位置
@@ -138,7 +138,7 @@ public class SeqList<T> extends Object {
         //循环B的长度
         for (int i = 0; i < seq.n; i++) {
             T str = (T) seq.element[i];//拿出B中此时下标的元素，再在A中寻找
-            if (this.search(str)!=-1)//寻找到相同元素
+            if (this.search(str) != -1)//寻找到相同元素
                 this.remove(this.search(str));//去除A中的相同元素
             else this.insert(str);//如果没找到插入A中
         }
