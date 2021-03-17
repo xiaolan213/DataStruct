@@ -19,4 +19,6 @@ public class Node<T> {
     public String toString() {
         return this.data.toString();
     }
+
+
 }
