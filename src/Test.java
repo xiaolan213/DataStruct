@@ -1,4 +1,4 @@
-import linearlist.SeqList;
+import 线性表.顺序表.SeqList;
 
 public class Test {
     public static void main(String... args) {
