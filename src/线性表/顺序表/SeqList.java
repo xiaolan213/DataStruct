@@ -1,4 +1,4 @@
-package linearlist;
+package 线性表.顺序表;
 
 //顺序表泛型类
 public class SeqList<T> extends Object {
