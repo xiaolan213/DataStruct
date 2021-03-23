@@ -47,32 +47,6 @@ public class SinglyList<T extends Comparable<? super T>> extends Object {
         this.head.next = temp;
     }
 
-
-
-//    //逆置
-//    public void reverse() {
-//        if (isEmpty()){
-//            return;
-//        }
-//        reverse(head.next);
-//    }
-//    //反转指定的curr，并将反转后的结点返回
-//    public Node reverse(Node curr){
-//        if (curr.next == null){
-//            head.next = curr;
-//            return curr;
-//        }
-//        //递归的反转当前的结点的下一个结点。返回值就是链表反转后的当前结点的上一个结点
-//        Node pre = reverse(curr.next);
-//        //让返回的下一个结点b变为当前结点
-//        pre.next = curr;
-//        //把当前结点的下一个结点变为null
-//        curr.next = null;
-//        return curr;
-//    }
-
-
-
     //插入,插入x为第i个元素 x!=null 返回结点。i<0 则头插入,若i>长度尾巴插入
     public Node<T> insert(int i,T x){
         if (x == null)
