@@ -47,7 +47,7 @@ public class AddList implements Comparable<AddList> {
 
     @Override
     public String toString() {
-        return name+" "+address+" "+mobile_num;
+        return "姓名:"+name+"\t地址:"+address+"\t手机号:"+mobile_num;
     }
 
     @Override
