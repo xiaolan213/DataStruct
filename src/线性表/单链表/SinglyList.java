@@ -1,6 +1,6 @@
 package 线性表.单链表;
 
-//单链表类 继承object
+//单链表类 继承object,并重写comparable接口
 public class SinglyList<T extends Comparable<? super T>> extends Object {
 
     public Node<T> head;//头指针,指向单链表的头节点
