@@ -1,6 +1,6 @@
 package 线性表.单链表.通讯录实现;
 
-//通讯录类
+//通讯录类,重写覆盖comparable接口泛型为本类
 public class AddList implements Comparable<AddList> {
 
     private String name;//姓名
