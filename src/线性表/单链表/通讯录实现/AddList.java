@@ -1,7 +1,7 @@
 package 线性表.单链表.通讯录实现;
 
 //通讯录类
-public class AddList{
+public class AddList implements Comparable<AddList> {
 
     private String name;//姓名
     private int mobile_num;//电话号码
@@ -11,6 +11,10 @@ public class AddList{
         this.name = name;
         this.mobile_num = mobile_num;
         this.address = address;
+    }
+
+    public AddList(String name) {
+        this.name = name;
     }
 
     public AddList() {
@@ -40,4 +44,14 @@ public class AddList{
         this.address = address;
     }
 
+
+    @Override
+    public String toString() {
+        return name+" "+address+" "+mobile_num;
+    }
+
+    @Override
+    public int compareTo(AddList o) {
+        return this.getName().compareTo(o.getName());
+    }
 }
