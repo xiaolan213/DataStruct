@@ -46,14 +46,26 @@ public class Test {
          */
 
         //单链表
-        //String[] val = new String[]{"1","2","3"};
-        SinglyList<AddList> singlyList = new SinglyList<AddList>();
-        singlyList.insert(new AddList("a",1,"aaa"));
-        singlyList.insert(new AddList("abc",138,"aaa"));
-        singlyList.insert(new AddList("abc",138,"aaa"));
-        singlyList.insert(new AddList("abc",138,"aaa"));
-        singlyList.insert(new AddList("abc",138,"aaa"));
+        String[] val = new String[]{"1","2","3"};
+        SinglyList<String> singlyList = new SinglyList<String>(val);
         System.out.println(singlyList.toString());
+        System.out.println("查找第一个元素:"+singlyList.get(0));
+        singlyList.reverse();
+        System.out.println("转置后"+singlyList.toString());
+        singlyList.remove(0);
+        System.out.println("删除第一个元素后:"+singlyList.toString());
+
+        //通讯录
+        SinglyList<AddList> singlyListAdd = new SinglyList<AddList>();
+        singlyListAdd.insert(new AddList("e",12345,"家5"));
+        singlyListAdd.insert(new AddList("a",1,"家1"));
+        singlyListAdd.insert(new AddList("d",1234,"家4"));
+        singlyListAdd.insert(new AddList("c",123,"家3"));
+        singlyListAdd.insert(new AddList("b",12,"家2"));
+
+        System.out.println("表里的元素有："+singlyListAdd.toString());
+        System.out.println("查找a的信息："+singlyListAdd.search(new AddList("a")));
+
     }
 
 }
