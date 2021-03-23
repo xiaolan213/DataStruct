@@ -1,4 +1,5 @@
-import 线性表.顺序表.SeqList;
+import 线性表.单链表.SinglyList;
+import 线性表.单链表.通讯录实现.AddList;
 
 public class Test {
     public static void main(String... args) {
@@ -19,7 +20,7 @@ public class Test {
          *System.out.println("共轭复数: " + con.output());
          */
 
-
+        /**
         //顺序表
         String val[] = {"a", "b", "c", "d", "e"};
         String val2[] = {"a", "b", "c"};
@@ -42,6 +43,17 @@ public class Test {
         );
         lista.difference(listc);
         System.out.println(lista.toString());
+         */
+
+        //单链表
+        //String[] val = new String[]{"1","2","3"};
+        SinglyList<AddList> singlyList = new SinglyList<AddList>();
+        singlyList.insert(new AddList("a",1,"aaa"));
+        singlyList.insert(new AddList("abc",138,"aaa"));
+        singlyList.insert(new AddList("abc",138,"aaa"));
+        singlyList.insert(new AddList("abc",138,"aaa"));
+        singlyList.insert(new AddList("abc",138,"aaa"));
+        System.out.println(singlyList.toString());
     }
 
 }
