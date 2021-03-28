@@ -1,6 +1,7 @@
 package 线性表.双链表;
 
 public class DoubleNode<T> {
+
     public T data;
     public DoubleNode<T> prev,next;//前驱,后驱
 
@@ -10,10 +11,12 @@ public class DoubleNode<T> {
         this.next = next;
     }
 
-    public DoubleNode(T data) {
+    public DoubleNode() {
         this(null,null,null);
     }
 
-    public DoubleNode() {
+    @Override
+    public String toString() {
+        return this.data.toString();
     }
 }
