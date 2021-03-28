@@ -1,5 +1,4 @@
-import 线性表.单链表.SinglyList;
-import 线性表.单链表.通讯录实现.AddList;
+import 线性表.双链表.CirDoubleList;
 
 public class Test {
     public static void main(String... args) {
@@ -45,6 +44,7 @@ public class Test {
         System.out.println(lista.toString());
          */
 
+        /**
         //单链表
         String[] val = new String[]{"1","2","3"};
         SinglyList<String> singlyList = new SinglyList<String>(val);
@@ -65,6 +65,23 @@ public class Test {
 
         System.out.println("表里的元素有："+singlyListAdd.toString());
         System.out.println("查找a的信息："+singlyListAdd.search(new AddList("a")));
+         */
+
+
+        CirDoubleList<String> cirDoubleList = new CirDoubleList<String>();
+        cirDoubleList.insert("3");
+        cirDoubleList.insert(1,"333");
+        cirDoubleList.insert("4");
+        cirDoubleList.remove(1);
+        CirDoubleList<String> cirDoubleList2 = new CirDoubleList<String>();
+        cirDoubleList2.insert("222");
+        cirDoubleList2.insert("222");
+        cirDoubleList.concat(cirDoubleList2);
+        System.out.println(cirDoubleList.toString());
+
+        CirDoubleList<String> cir3 = new CirDoubleList<String>();
+        cir3.copy(cirDoubleList);
+        System.out.println(cir3.toString());
 
     }
 
