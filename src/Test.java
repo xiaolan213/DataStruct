@@ -1,4 +1,5 @@
-import 线性表.双链表.CirDoubleList;
+import 串.MyString;
+import 串.MyStringBuffer;
 
 public class Test {
     public static void main(String... args) {
@@ -67,12 +68,14 @@ public class Test {
         System.out.println("查找a的信息："+singlyListAdd.search(new AddList("a")));
          */
 
-
+/**
         CirDoubleList<String> cirDoubleList = new CirDoubleList<String>();
         cirDoubleList.insert("3");
         cirDoubleList.insert(1,"333");
         cirDoubleList.insert("4");
+        System.out.println(cirDoubleList.toString());
         cirDoubleList.remove(1);
+        System.out.println(cirDoubleList.toString());
         CirDoubleList<String> cirDoubleList2 = new CirDoubleList<String>();
         cirDoubleList2.insert("222");
         cirDoubleList2.insert("222");
@@ -82,7 +85,34 @@ public class Test {
         CirDoubleList<String> cir3 = new CirDoubleList<String>();
         cir3.copy(cirDoubleList);
         System.out.println(cir3.toString());
+        String str ;
+ */
 
+        //串
+        char[] myChar = new char[]{'a','c','b','d'} ;
+        char[] myChar1 = new char[]{'c','d','q','z'} ;
+        MyString myString  = new MyString(myChar);
+        MyString myString1  = new MyString(myChar1);
+        System.out.println("串1为:" + myString.toString());
+        System.out.println("串2为:" + myString1.toString());
+        System.out.println("串1长度为：" + myString.length());
+        System.out.println("串2长度为：" + myString1.length());
+        System.out.println("两串比较结果为:" + myString.compareTo(myString1));
+        MyString myString2 = new MyString();
+        myString2 = myString.concat(myString1);
+        System.out.println("两串结合后:" + myString2);
+        System.out.println("2-4位置的字串为:" + myString2.substring(1,4));
+
+        MyStringBuffer myStringBuffer = new MyStringBuffer("myBuffer1");
+        MyStringBuffer myStringBuffer1 = new MyStringBuffer("myBuffer2");
+        MyStringBuffer myStringBuffer2 = new MyStringBuffer("myBuffer3");
+        System.out.println("Buffer1为:" + myString.toString());
+        System.out.println("Buffer2为:" + myString1.toString());
+        myStringBuffer.StrInsert(myStringBuffer1,0);
+        System.out.println("插入后的buffer1为:" + myStringBuffer.toString());
+        System.out.println("替换的buffer3为:" + myStringBuffer2.toString());
+        myStringBuffer.StrReplaceAll(myStringBuffer1 , myStringBuffer2);
+        System.out.println("替换后的buffer1为:" + myStringBuffer.toString());
     }
 
 }
