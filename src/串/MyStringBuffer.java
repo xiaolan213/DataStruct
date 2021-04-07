@@ -97,25 +97,13 @@ public final class MyStringBuffer implements Serializable {
     public synchronized MyStringBuffer StrReplaceAll( MyStringBuffer t, MyStringBuffer v){
         int i = this.indexOf(t);
         while(i!=-1)
-        {
             this.delete(i, i + t.length());
-        }
         return this;
     }
 
     public void delete(int start, int end) {
-        if (start < 0) {
+        if (start < 0 || start >= end || end > n || end < 0)
             return;
-        }
-        if (start >= end) {
-            return;
-        }
-        if (end > n) {
-            return;
-        }
-        if (end < 0) {
-            return;
-        }
         System.arraycopy(value, end, value, start, n - end);
         n -= end - start;
     }
